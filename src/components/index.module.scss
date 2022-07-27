@@ -1,0 +1,88 @@
+.banner {
+  background: url("../images/home-banner.jpg");
+  height: calc(100vh - 96px - 40px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  gap: 150px;
+  &Actions {
+    display: flex;
+    gap: 100px;
+  }
+}
+.about {
+  background: url("../images/gradient.png");
+  background-size: cover;
+  background-position: center;
+  &TwoCol {
+    display: flex;
+    gap: 180px;
+  }
+  &Text {
+    max-width: 550px;
+    display: flex;
+    align-items: center;
+  }
+  &Stat {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+  }
+}
+.afisha {
+  &Title {
+    margin-bottom: 120px;
+  }
+  &TwoCol {
+    display: flex;
+    gap: 85px;
+  }
+  &Cards {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    gap: 60px;
+  }
+}
+.whoAreWe {
+  background: url("../images/whoAreWe.jpg");
+  background-size: cover;
+  &Title {
+    margin-bottom: 65px;
+  }
+  &TwoCol {
+    margin-top: 60px;
+    display: flex;
+    gap: 100px;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.sectionContainer {
+  padding: 75px 0;
+}
+@media (max-width: 768px) {
+  .banner {
+    &Text {
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      text-align: center;
+      padding: 0 25px;
+    }
+    &Actions {
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  .about {
+    &TwoCol {
+      flex-direction: column;
+    }
+  }
+  .sectionContainer {
+    padding: 45px 25px;
+  }
+}

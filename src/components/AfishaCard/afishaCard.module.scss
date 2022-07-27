@@ -1,0 +1,26 @@
+@import "../global-variables.scss";
+
+.afisha {
+  display: flex;
+  gap: 30px;
+
+  &Title {
+    color: $text-blue;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  &Text {
+    font-weight: 600;
+    font-size: 20px;
+  }
+
+  &Link {
+    text-decoration: underline;
+    font-weight: 600;
+    color: $text-blue;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+}
