@@ -40,7 +40,7 @@ h3 {
   line-height: 29px;
 }
 .header {
-  background-color: $blue;
+  background-color: $header-bg;
   padding: 10px;
   display: flex;
   justify-content: center;
@@ -103,6 +103,7 @@ h3 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 30px;
   &__title {
     text-align: center;
   }
@@ -110,6 +111,8 @@ h3 {
     font-weight: 700;
     font-size: 36px;
     line-height: 44px;
+    padding: 0 30px;
+    text-align: center;
     color: $blue;
     margin-bottom: 10%;
   }
@@ -245,6 +248,7 @@ h3 {
 }
 .who-are-we {
   background: url("../images/who-are-we.jpg");
+  background-size: cover;
   &__container {
     display: flex;
     flex-direction: column;
@@ -308,7 +312,7 @@ h3 {
   }
   &__button {
     width: max-content;
-    margin: 0 auto;
+    margin: 0 0 0 29%;
   }
   &__line {
     margin-top: 95px;
@@ -426,7 +430,13 @@ h3 {
     text-decoration: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
+  body {
+    background: url("../images/mobile-bg-top.png") 0 25%,
+      $bg url("../images/mobile-bg.png") 0 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
   h1 {
     font-weight: 700;
     font-size: 40px;
@@ -474,7 +484,7 @@ h3 {
     background: none;
     width: calc(100% - 60px);
     &.bg-white {
-      background-color: $white;
+      background-color: rgb(255 255 255 / 75%);
     }
     &__container {
       position: relative;
@@ -583,6 +593,7 @@ h3 {
       font-weight: 500;
       font-size: 18px;
       line-height: 22px;
+      flex: none;
     }
     &__text {
       font-weight: 600;
@@ -606,6 +617,9 @@ h3 {
     }
     &__text {
       gap: 30px;
+    }
+    &__button {
+      margin: 0 auto;
     }
     &__paragraph {
       font-weight: 500;
@@ -652,6 +666,28 @@ h3 {
     gap: 0;
     &__item {
       width: 100%;
+      &:nth-child(4) {
+        a {
+          font-size: 0;
+          line-height: 1.2;
+
+          &::after {
+            content: "MBSC";
+            font-size: 15px;
+          }
+        }
+      }
+      &:last-child {
+        a {
+          font-size: 0;
+          line-height: 1.2;
+
+          &::after {
+            content: "Все";
+            font-size: 15px;
+          }
+        }
+      }
     }
     &__icon {
       width: 35px;
@@ -697,7 +733,8 @@ h3 {
     }
     &__lang {
       font-size: 14px;
-      text-transform: uppercase;
+
+      text-transform: lowercase;
     }
     &__title {
       font-size: 14px;

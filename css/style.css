@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 body {
   font-family: "Montserrat", sans-serif;
@@ -43,7 +44,7 @@ h3 {
 }
 
 .header {
-  background-color: #034694;
+  background-color: rgba(3, 70, 148, 0.75);
   padding: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -128,6 +129,7 @@ h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 30px;
 }
 .banner__title {
   text-align: center;
@@ -136,6 +138,8 @@ h3 {
   font-weight: 700;
   font-size: 36px;
   line-height: 44px;
+  padding: 0 30px;
+  text-align: center;
   color: #034694;
   margin-bottom: 10%;
 }
@@ -318,6 +322,7 @@ h3 {
 
 .who-are-we {
   background: url("../images/who-are-we.jpg");
+  background-size: cover;
 }
 .who-are-we__container {
   display: -webkit-box;
@@ -409,7 +414,7 @@ h3 {
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
-  margin: 0 auto;
+  margin: 0 0 0 29%;
 }
 .contacts__line {
   margin-top: 95px;
@@ -557,7 +562,13 @@ h3 {
   text-decoration: none;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 992px) {
+  body {
+    background: url("../images/mobile-bg-top.png") 0 25%, #e5e5e5 url("../images/mobile-bg.png") 0 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+
   h1 {
     font-weight: 700;
     font-size: 40px;
@@ -613,7 +624,7 @@ h3 {
     width: calc(100% - 60px);
   }
   .header.bg-white {
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.75);
   }
   .header__container {
     position: relative;
@@ -738,6 +749,9 @@ h3 {
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+    -webkit-box-flex: 0;
+        -ms-flex: none;
+            flex: none;
   }
   .statistics__text {
     font-weight: 600;
@@ -764,6 +778,9 @@ h3 {
   }
   .contacts__text {
     gap: 30px;
+  }
+  .contacts__button {
+    margin: 0 auto;
   }
   .contacts__paragraph {
     font-weight: 500;
@@ -818,6 +835,22 @@ h3 {
   }
   .social-networks__item {
     width: 100%;
+  }
+  .social-networks__item:nth-child(4) a {
+    font-size: 0;
+    line-height: 1.2;
+  }
+  .social-networks__item:nth-child(4) a::after {
+    content: "MBSC";
+    font-size: 15px;
+  }
+  .social-networks__item:last-child a {
+    font-size: 0;
+    line-height: 1.2;
+  }
+  .social-networks__item:last-child a::after {
+    content: "Все";
+    font-size: 15px;
   }
   .social-networks__icon {
     width: 35px;
@@ -878,7 +911,7 @@ h3 {
   }
   .footer__lang {
     font-size: 14px;
-    text-transform: uppercase;
+    text-transform: lowercase;
   }
   .footer__title {
     font-size: 14px;
